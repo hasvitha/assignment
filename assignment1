@@ -1,1 +1,206 @@
-1
+
+[acadgild@localhost ~]$ start-all.sh
+This script is Deprecated. Instead use start-dfs.sh and start-yarn.sh
+18/07/22 19:37:05 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Starting namenodes on [localhost]
+localhost: starting namenode, logging to /home/acadgild/install/hadoop/hadoop-2.6.5/logs/hadoop-acadgild-namenode-localhost.localdomain.out
+localhost: starting datanode, logging to /home/acadgild/install/hadoop/hadoop-2.6.5/logs/hadoop-acadgild-datanode-localhost.localdomain.out
+Starting secondary namenodes [0.0.0.0]
+0.0.0.0: starting secondarynamenode, logging to /home/acadgild/install/hadoop/hadoop-2.6.5/logs/hadoop-acadgild-secondarynamenode-localhost.localdomain.out
+18/07/22 19:37:59 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+starting yarn daemons
+starting resourcemanager, logging to /home/acadgild/install/hadoop/hadoop-2.6.5/logs/yarn-acadgild-resourcemanager-localhost.localdomain.out
+localhost: starting nodemanager, logging to /home/acadgild/install/hadoop/hadoop-2.6.5/logs/yarn-acadgild-nodemanager-localhost.localdomain.out
+You have new mail in /var/spool/mail/acadgild
+
+
+[acadgild@localhost ~]$ jps
+3665 SecondaryNameNode
+3430 NameNode
+3527 DataNode
+3870 ResourceManager
+3998 NodeManager
+4031 Jps
+
+
+[acadgild@localhost ~]$ pwd
+/home/acadgild
+You have new mail in /var/spool/mail/acadgild
+[acadgild@localhost ~]$ ls
+Desktop    eclipse            Link to eclipse  Music     sample.txt  user.java
+Documents  eclipse-workspace  MapReduce.jar    Pictures  Templates   Videos
+Downloads  install            max-temp.txt     Public    text.txt
+[acadgild@localhost ~]$ ls -ls
+total 184
+  4 drwxr-xr-x.  3 acadgild acadgild   4096 Jul 15 17:04 Desktop
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Feb  2 12:52 Documents
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Feb 13 14:24 Downloads
+  4 drwxrwxr-x.  3 acadgild acadgild   4096 Dec 29  2017 eclipse
+  4 drwxrwxr-x.  5 acadgild acadgild   4096 Jul 15 17:25 eclipse-workspace
+  4 drwxrwxr-x. 13 acadgild acadgild   4096 Feb  9 18:06 install
+  0 lrwxrwxrwx.  1 acadgild acadgild     22 Jul 15 17:02 Link to eclipse -> /home/acadgild/eclipse
+  4 -rw-rw-r--.  1 acadgild acadgild   4072 Jul 15 18:51 MapReduce.jar
+  4 -rw-rw-r--.  1 acadgild acadgild     70 Jul 18 03:26 max-temp.txt
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Dec 27  2017 Music
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Dec 27  2017 Pictures
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Dec 27  2017 Public
+  4 -rw-rw-r--.  1 acadgild acadgild     34 Jul 15 15:34 sample.txt
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Dec 27  2017 Templates
+  4 -rw-rw-r--.  1 acadgild acadgild     83 Jul 18 03:17 text.txt
+124 -rw-rw-r--.  1 acadgild acadgild 123682 Jul 21 18:26 user.java
+  4 drwxr-xr-x.  2 acadgild acadgild   4096 Dec 27  2017 Videos
+[acadgild@localhost ~]$ 
+
+
+
+ 
+[acadgild@localhost ~]$ nano Assignment_1.txt
+You have new mail in /var/spool/mail/acadgild
+[acadgild@localhost ~]$ ls
+Asignment_1       Downloads          Link to eclipse  Pictures    text.txt
+Assignment_1.txt  eclipse            MapReduce.jar    Public      user.java
+Desktop           eclipse-workspace  max-temp.txt     sample.txt  Videos
+Documents         install            Music            Templates
+
+
+[acadgild@localhost ~]$ cat Assignment_1.txt
+This is the first assignment
+
+
+
+[acadgild@localhost ~]$ mkdir user
+
+
+[acadgild@localhost ~]$ ls
+Asignment_1       Downloads          Link to eclipse  Pictures    text.txt
+Assignment_1.txt  eclipse            MapReduce.jar    Public      user
+Desktop           eclipse-workspace  max-temp.txt     sample.txt  user.java
+Documents         install            Music            Templates   Videos
+[acadgild@localhost ~]$ cd user
+You have new mail in /var/spool/mail/acadgild
+
+[acadgild@localhost user]$ 
+
+[acadgild@localhost user]$ mkdir acadgild
+
+[acadgild@localhost user]$ ls
+acadgild
+
+[acadgild@localhost user]$ pwd
+/home/acadgild/user
+
+[acadgild@localhost user]$ 
+
+
+
+[acadgild@localhost user]$ cd $HADOOP_HOME/etc/hadoop
+You have new mail in /var/spool/mail/acadgild
+ [acadgild@localhost hadoop]$ ls
+capacity-scheduler.xml      kms-log4j.properties
+configuration.xsl           kms-site.xml
+container-executor.cfg      log4j.properties
+core-site.xml               mapred-env.cmd
+core-site.xml~              mapred-env.sh
+hadoop-env.cmd              mapred-env.sh~
+hadoop-env.sh               mapred-queues.xml.template
+hadoop-env.sh~              mapred-site.xml
+hadoop-metrics2.properties  mapred-site.xml.template
+hadoop-metrics.properties   slaves
+hadoop-policy.xml           ssl-client.xml.example
+hdfs-site.xml               ssl-server.xml.example
+hdfs-site.xml~              word-count.txt
+httpfs-env.sh               yarn-env.cmd
+httpfs-log4j.properties     yarn-env.sh
+httpfs-signature.secret     yarn-env.sh~
+httpfs-site.xml             yarn-site.xml
+kms-acls.xml                yarn-site.xml~
+kms-env.sh
+
+
+[acadgild@localhost hadoop]$ cd $HADOOP_HOME/
+
+[acadgild@localhost hadoop-2.6.5]$ ls
+bin  include  libexec      logs        README.txt  share
+etc  lib      LICENSE.txt  NOTICE.txt  sbin
+
+
+[acadgild@localhost hadoop-2.6.5]$ mkdir user
+You have new mail in /var/spool/mail/acadgild
+
+
+[acadgild@localhost hadoop-2.6.5]$ cd user
+
+
+[acadgild@localhost user]$ mkdir -p acadgild/Hadoop
+
+
+[acadgild@localhost user]$ cd acadgild/Hadoop
+
+
+[acadgild@localhost Hadoop]$ ls
+
+
+[acadgild@localhost Hadoop]$ pwd
+/home/acadgild/install/hadoop/hadoop-2.6.5/user/acadgild/Hadoop
+You have new mail in /var/spool/mail/acadgild
+
+
+[acadgild@localhost Hadoop]$ cd ..
+
+
+[acadgild@localhost acadgild]$ cd ..
+
+
+[acadgild@localhost user]$ cd ..
+
+
+[acadgild@localhost hadoop-2.6.5]$ ls
+bin  include  libexec      logs        README.txt  share
+etc  lib      LICENSE.txt  NOTICE.txt  sbin        user
+
+
+[acadgild@localhost hadoop-2.6.5]$ cd /user/acadgild/Hadoop
+bash: cd: /user/acadgild/Hadoop: No such file or directory
+You have new mail in /var/spool/mail/acadgild
+
+
+[acadgild@localhost hadoop-2.6.5]$ cd user/acadgild/Hadoop
+
+
+[acadgild@localhost Hadoop]$ vi word-count.txt
+You have new mail in /var/spool/mail/acadgild
+[acadgild@localhost Hadoop]$ cat word-count.txt
+this is hadoop second task
+ 
+
+
+[acadgild@localhost Hadoop]$
+
+
+
+[acadgild@localhost ~]$ hadoop fs -ls /user
+18/07/23 00:02:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 2 items
+drwxr-xr-x   - acadgild supergroup          0 2018-07-23 00:01 /user/acadgild
+drwxr-xr-x   - acadgild supergroup          0 2018-02-09 14:50 /user/hive
+
+[acadgild@localhost ~]$ hadoop fs -put max-temp.txt /user/acadgild/
+18/07/23 00:03:13 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+You have new mail in /var/spool/mail/acadgild
+
+[acadgild@localhost ~]$ hadoop fs -ls /user/acadgild
+18/07/23 00:03:34 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+Found 1 items
+-rw-r--r--   1 acadgild supergroup         70 2018-07-23 00:03 /user/acadgild/max-temp.txt
+
+
+
+
+
+
+
+
+
+
+
+
